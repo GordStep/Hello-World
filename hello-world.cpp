@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
-#include <Windows.h>
+#include <thread>
+#include <chrono>
+
 using namespace std;
 
 int main()
@@ -18,7 +20,7 @@ int main()
                 res += j;
                 break;
             }
-            Sleep(100);
+              std::this_thread::sleep_for(std::chrono::milliseconds(100));
         }
         
     }
